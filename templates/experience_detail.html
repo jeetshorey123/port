@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ experience.company }} — {{ experience.role }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id="three-wrap" aria-hidden="true"><canvas id="three-canvas"></canvas></div>
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-mark brand-photo">
+        <img src="{{ url_for('static', filename='img/photo.jpg') }}" alt="Jeet Shorey">
+      </div>
+      <div>
+        <h3>{{ profile.name }}</h3>
+        <small>Portfolio</small>
+      </div>
+    </div>
+    <nav id="nav">
+      <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+      <a class="nav-link active" href="#overview" data-target="overview">Overview</a>
+      <a class="nav-link" href="#diarization" data-target="diarization">Diarization</a>
+      <a class="nav-link" href="#work" data-target="work">Work</a>
+      <a class="nav-link" href="#results" data-target="results">Results</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      <a href="{{ profile.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+      <span>{{ profile.location }}</span>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section id="overview" class="section card reveal detail-hero">
+      <div class="detail-copy">
+        <p class="eyebrow">Experience</p>
+        <h1>{{ experience.role }}</h1>
+        <p class="lead">{{ experience.company }}</p>
+        <p class="intro">{{ experience.summary }}</p>
+        <p class="long-copy mt-20">{{ experience.brief }}</p>
+        <div class="tag-row">
+          <span class="tag">{{ experience.period }}</span>
+          <span class="tag">{{ experience.location }}</span>
+        </div>
+      </div>
+      {% if experience.image %}
+      <div class="detail-visual card-surface">
+        <img src="{{ url_for('static', filename=experience.image) }}" alt="{{ experience.company }} preview">
+      </div>
+      {% endif %}
+    </section>
+
+    <section id="diarization" class="section card reveal">
+      <div class="section-heading"><div><p class="eyebrow">Transcript Intelligence</p><h2>Speaker Diarization</h2></div></div>
+      <p class="long-copy">{{ experience.diarization_intro }}</p>
+      <div class="two-col-text">
+        <div>
+          <h3>Agent stream</h3>
+          <ul class="feature-list">
+            {% for item in experience.agent_notes %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3>Customer stream</h3>
+          <ul class="feature-list">
+            {% for item in experience.customer_notes %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section card reveal">
+      <div class="section-heading"><div><p class="eyebrow">My Work</p><h2>What I Built</h2></div></div>
+      <div class="steps-grid">
+        {% for item in experience.work_items %}
+        <article class="mini-card">
+          <span class="project-badge">{{ loop.index }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.body }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="results" class="section card reveal">
+      <div class="section-heading"><div><p class="eyebrow">Outputs</p><h2>Results & Table</h2></div></div>
+      <div class="results-grid">
+        {% for metric in experience.metrics %}
+        <article class="metric-card">
+          <span>{{ metric.label }}</span>
+          <strong>{{ metric.value }}</strong>
+          <div class="metric-bar"><div style="width: {{ metric.width }}%"></div></div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="table-card">
+        <table>
+          <thead><tr><th>Stage</th><th>Input</th><th>Output</th><th>Note</th></tr></thead>
+          <tbody>
+            {% for row in experience.table_rows %}
+            <tr><td>{{ row.stage }}</td><td>{{ row.input }}</td><td>{{ row.output }}</td><td>{{ row.note }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

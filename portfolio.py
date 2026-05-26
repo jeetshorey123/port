@@ -1,7 +1,7 @@
 from flask import Flask, abort, render_template, url_for
 
 
-app = Flask(__name__, static_folder="public", static_url_path="/public", template_folder="templates")
+app = Flask(__name__, static_folder="public", static_url_path="", template_folder="templates")
 
 
 def build_project(

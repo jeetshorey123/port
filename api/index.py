@@ -1,13 +1,9 @@
 import os
 import sys
 
-
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-
-
-sys.path.insert(0, BASE_DIR)
+# Add the repo root (parent of api/) to sys.path so portfolio.py is importable
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from portfolio import app as flask_app
-
 
 app = flask_app

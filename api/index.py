@@ -2,7 +2,10 @@ import os
 import sys
 
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+
+sys.path.insert(0, BASE_DIR)
 
 from portfolio import app as flask_app
 

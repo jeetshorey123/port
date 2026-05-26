@@ -1,7 +1,17 @@
+import os
+
 from flask import Flask, abort, render_template, url_for
 
 
-app = Flask(__name__, static_folder="public", static_url_path="", template_folder="templates")
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+
+app = Flask(
+    __name__,
+    static_folder=os.path.join(BASE_DIR, "public"),
+    static_url_path="/static",
+    template_folder=os.path.join(BASE_DIR, "templates"),
+)
 
 
 def build_project(

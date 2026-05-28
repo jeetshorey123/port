@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details - Jeet Shorey Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-content">
+        <h1 class="loading-title">LOADING PROJECT</h1>
+        <div class="loading-bar-container">
+          <div class="loading-bar"></div>
+        </div>
+        <div class="loading-percentage">0%</div>
+      </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-profile">
+        <div class="profile-image">👨‍💻</div>
+        <h2 class="profile-name">Jeet Shorey</h2>
+        <p class="profile-role">Full Stack Developer</p>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-link">
+            <a href="./index.html">
+              <span class="nav-icon">🏠</span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="./index.html#projects">
+              <span class="nav-icon">💻</span>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="./index.html#experience">
+              <span class="nav-icon">🎯</span>
+              <span>Experience</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="./index.html#skills">
+              <span class="nav-icon">⚡</span>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="./index.html#education">
+              <span class="nav-icon">🎓</span>
+              <span>Education</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="./index.html#contact">
+              <span class="nav-icon">📧</span>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-social">
+        <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+          <span>🔗</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
+          <span>🐦</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle">☰</button>
+
+    <!-- Main Content -->
+    <main>
+      <div class="project-detail">
+        <!-- Hero Image -->
+        <div class="detail-hero">📊</div>
+
+        <!-- Project Overview -->
+        <div class="detail-section">
+          <h3>AWS Call Transcription & Sentiment Analysis</h3>
+          <p class="detail-content">
+            Dockerized AWS Lambda pipeline that transcribes calls with Whisper, separates agent/customer
+            speech, scores sentiment with VADER, detects compliance keywords, and stores results in DynamoDB.
+          </p>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="detail-section">
+          <h3>Problem Statement</h3>
+          <p class="detail-content">
+            The central challenge is to process noisy customer-care recordings at scale while preserving
+            speaker separation, sentiment context, and compliance signals for downstream reporting.
+          </p>
+
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="detail-item-title">Multi-language Support</div>
+              <div class="detail-item-text">
+                Hindi-English code switching makes single-pass transcription unreliable without multilingual
+                ASR models.
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Speaker Diarization</div>
+              <div class="detail-item-text">
+                Agent and customer voices need to be separated before sentiment scoring is meaningful.
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Compliance Tracking</div>
+              <div class="detail-item-text">
+                Compliance teams require structured output schema rather than raw transcripts.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="detail-section">
+          <h3>Methodology</h3>
+
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="detail-item-title">Audio Ingestion</div>
+              <div class="detail-item-text">
+                Uploaded MP3/WAV triggers the pipeline through S3 and invokes Lambda container.
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Transcription</div>
+              <div class="detail-item-text">
+                Whisper transcribes the file and diarization separates agent and customer streams.
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Sentiment Analysis</div>
+              <div class="detail-item-text">
+                VADER computes polarity scores while flagged keywords identify risky language.
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Persistence</div>
+              <div class="detail-item-text">
+                Structured JSON output stored in DynamoDB for audits, analytics, and monitoring.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="detail-section">
+          <h3>Technologies Used</h3>
+
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="detail-item-title">AWS Lambda</div>
+              <div class="detail-item-text">Serverless compute for scalable processing</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Amazon S3</div>
+              <div class="detail-item-text">Event-driven input storage</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Whisper ASR</div>
+              <div class="detail-item-text">Multilingual transcription engine</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">VADER Sentiment</div>
+              <div class="detail-item-text">Social media sentiment analyzer</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">DynamoDB</div>
+              <div class="detail-item-text">NoSQL database for results</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-item-title">Docker</div>
+              <div class="detail-item-text">Containerization for Lambda</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results & Metrics -->
+        <div class="detail-section">
+          <h3>Results & Metrics</h3>
+
+          <div class="metrics">
+            <div class="metric-card">
+              <div class="metric-value">94%</div>
+              <div class="metric-label">Transcription Accuracy</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">2.5x</div>
+              <div class="metric-label">Processing Speed Improvement</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">60%</div>
+              <div class="metric-label">Cost Reduction</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">9.2/10</div>
+              <div class="metric-label">User Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Implementation Details -->
+        <div class="detail-section">
+          <h3>Implementation Details</h3>
+          <p class="detail-content">
+            The pipeline is architected as a fully serverless system leveraging AWS's managed services to
+            ensure scalability, reliability, and cost efficiency. Each component is containerized using
+            Docker for consistency across environments.
+          </p>
+
+          <h4 style="color: var(--primary); margin-top: 1.5rem; margin-bottom: 1rem;">
+            Key Features:
+          </h4>
+
+          <ul style="color: var(--text-secondary); margin-left: 1.5rem;">
+            <li>Automatic scaling based on queue depth</li>
+            <li>Real-time processing with <2min latency</li>
+            <li>Support for multiple audio formats</li>
+            <li>Granular compliance keyword matching</li>
+            <li>Full audit trail in DynamoDB</li>
+            <li>Integration-ready REST API</li>
+          </ul>
+        </div>
+
+        <!-- Back to Projects -->
+        <div style="margin-top: 3rem; text-align: center;">
+          <a
+            href="./index.html#projects"
+            class="btn"
+            style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;"
+          >
+            ← Back to Projects
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Jeet Shorey. All rights reserved.</p>
+      <p>Crafted with ❤️ and cutting-edge technology</p>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

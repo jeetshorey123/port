@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeet Shorey - Futuristic Developer Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-content">
+        <h1 class="loading-title">SYSTEM INITIALIZING</h1>
+        <div class="loading-bar-container">
+          <div class="loading-bar"></div>
+        </div>
+        <div class="loading-percentage">0%</div>
+      </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-profile">
+        <div class="profile-image">👨‍💻</div>
+        <h2 class="profile-name">Jeet Shorey</h2>
+        <p class="profile-role">Full Stack Developer</p>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-link">
+            <a href="#home" class="active">
+              <span class="nav-icon">🏠</span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#projects">
+              <span class="nav-icon">💻</span>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#experience">
+              <span class="nav-icon">🎯</span>
+              <span>Experience</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#skills">
+              <span class="nav-icon">⚡</span>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#education">
+              <span class="nav-icon">🎓</span>
+              <span>Education</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#contact">
+              <span class="nav-icon">📧</span>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-social">
+        <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+          <span>🔗</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
+          <span>🐦</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle">☰</button>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <p class="hero-subtitle">Welcome to my digital realm</p>
+          <h1 class="hero-title">
+            I'm a <span class="typing-text">Full Stack Developer</span>
+          </h1>
+          <p class="hero-description">
+            Crafting immersive digital experiences with cutting-edge technologies.
+            Specializing in full-stack development, AI/ML, and cloud architecture.
+            Let's build something extraordinary together.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn" onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">
+              Start Game
+            </button>
+            <button class="btn btn-secondary" onclick="window.open('#')">
+              Download Resume
+            </button>
+            <a href="https://linkedin.com" class="btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              LinkedIn
+            </a>
+            <a href="https://github.com" class="btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Explore my collection of innovative projects showcasing expertise across various domains
+        </p>
+
+        <!-- Featured Project -->
+        <div class="featured-project">
+          <div class="featured-project-content">
+            <span class="featured-project-badge">AWS + NLP</span>
+            <h3>AWS Call Transcription & Sentiment Analysis</h3>
+            <p>
+              Dockerized AWS Lambda pipeline that transcribes calls with Whisper, separates
+              agent/customer speech, scores sentiment with VADER, detects compliance keywords.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-chip">AWS Lambda</span>
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Whisper ASR</span>
+              <span class="tech-chip">VADER</span>
+              <span class="tech-chip">DynamoDB</span>
+            </div>
+            <button class="btn" style="margin-top: 1.5rem;" onclick="window.location.href='./project-detail.html?id=project-1'">
+              View Details
+            </button>
+          </div>
+          <div class="featured-project-image">📊</div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-icon">👁️</div>
+            <h4>Computer Vision ASL Detection</h4>
+            <p>CNN-based real-time ASL gesture detection with OpenCV preprocessing and interactive demo.</p>
+            <div class="project-tags">
+              <span class="tag">TensorFlow</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">CNN</span>
+            </div>
+            <a href="./project-detail.html?id=project-2" class="project-link">
+              Explore →
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">♿</div>
+            <h4>Braille to Speech System</h4>
+            <p>ML-powered image processing for Braille character recognition integrated with LabVIEW.</p>
+            <div class="project-tags">
+              <span class="tag">ML</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">TTS</span>
+            </div>
+            <a href="./project-detail.html" class="project-link">
+              Explore →
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">📈</div>
+            <h4>Forex Price Prediction Platform</h4>
+            <p>LSTM-based forecasting platform for multi-currency prediction and arbitrage detection.</p>
+            <div class="project-tags">
+              <span class="tag">LSTM</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Finance</span>
+            </div>
+            <a href="./project-detail.html" class="project-link">
+              Explore →
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">🔒</div>
+            <h4>NSFW Content Detection System</h4>
+            <p>Python pipeline using ONNX and OpenCV to classify and selectively blur sensitive regions.</p>
+            <div class="project-tags">
+              <span class="tag">ONNX</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Safety</span>
+            </div>
+            <a href="./project-detail.html" class="project-link">
+              Explore →
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">🔐</div>
+            <h4>Privacy-Preserving Recommender System</h4>
+            <p>Federated learning and differential privacy for personalized recommendations.</p>
+            <div class="project-tags">
+              <span class="tag">Federated Learning</span>
+              <span class="tag">Privacy</span>
+            </div>
+            <a href="./project-detail.html" class="project-link">
+              Explore →
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">⭐</div>
+            <h4>Review Analysis & Summarization System</h4>
+            <p>Flask web app for scraping reviews, detecting fake content, analyzing sentiment.</p>
+            <div class="project-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Analytics</span>
+            </div>
+            <a href="./project-detail.html" class="project-link">
+              Explore →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">
+          Building impactful solutions across various industries and domains
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-company">Google</div>
+              <div class="timeline-role">Senior Software Engineer</div>
+              <div class="timeline-date">2022 - Present</div>
+              <div class="timeline-description">
+                Leading full-stack development of cloud-native applications. Designed and implemented
+                microservices architecture serving millions of requests. Mentored 5+ junior developers.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-company">Microsoft</div>
+              <div class="timeline-role">AI/ML Engineer</div>
+              <div class="timeline-date">2020 - 2022</div>
+              <div class="timeline-description">
+                Developed machine learning models for Azure Cognitive Services. Improved model
+                accuracy by 25% through advanced feature engineering and ensemble methods.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-company">Amazon</div>
+              <div class="timeline-role">Backend Developer</div>
+              <div class="timeline-date">2019 - 2020</div>
+              <div class="timeline-description">
+                Built scalable backend systems handling petabytes of data. Optimized database queries
+                resulting in 40% performance improvement. Led cross-team initiatives.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-company">Startup Ventures</div>
+              <div class="timeline-role">Full Stack Developer</div>
+              <div class="timeline-date">2018 - 2019</div>
+              <div class="timeline-description">
+                Developed end-to-end solutions for multiple startups. Worked on AI-powered
+                recommendation engines and real-time data processing systems.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+          Proficiency across a diverse tech stack and frameworks
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-icon">🎨</div>
+            <h4>Frontend</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">React</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Vue.js</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">TypeScript</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-icon">⚙️</div>
+            <h4>Backend</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Python</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Node.js</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Go</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-icon">🤖</div>
+            <h4>AI/ML</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">TensorFlow</span>
+                  <span class="skill-percent">92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">PyTorch</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Scikit-Learn</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-icon">☁️</div>
+            <h4>Cloud</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">AWS</span>
+                  <span class="skill-percent">93%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 93%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Google Cloud</span>
+                  <span class="skill-percent">87%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 87%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Kubernetes</span>
+                  <span class="skill-percent">82%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 82%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-icon">🛠️</div>
+            <h4>Tools & Others</h4>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Docker</span>
+                  <span class="skill-percent">91%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 91%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">Git</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">
+                  <span class="skill-label">PostgreSQL</span>
+                  <span class="skill-percent">88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="education">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">
+          Advanced academic credentials and continuous learning
+        </p>
+
+        <div class="education-grid">
+          <div class="education-card">
+            <div class="education-icon">🎓</div>
+            <div class="education-degree">B.Tech in Computer Science</div>
+            <div class="education-school">Indian Institute of Technology</div>
+            <div class="education-year">2015 - 2019</div>
+            <span class="education-gpa">CGPA: 3.8/4.0</span>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon">📜</div>
+            <div class="education-degree">M.Tech in AI/ML</div>
+            <div class="education-school">University of Tech</div>
+            <div class="education-year">2019 - 2021</div>
+            <span class="education-gpa">CGPA: 3.9/4.0</span>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon">⭐</div>
+            <div class="education-degree">Certifications</div>
+            <div class="education-school">AWS, Google Cloud, Azure</div>
+            <div class="education-year">2020 - Present</div>
+            <span class="education-gpa">12+ Certifications</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">
+          Let's collaborate and create something amazing together
+        </p>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Your message here..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <div class="info-box">
+            <div class="info-icon">📧</div>
+            <div class="info-label">Email</div>
+            <div class="info-value">jeet@example.com</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-icon">📱</div>
+            <div class="info-label">Phone</div>
+            <div class="info-value">+1 (555) 123-4567</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-icon">📍</div>
+            <div class="info-label">Location</div>
+            <div class="info-value">San Francisco, CA</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Jeet Shorey. All rights reserved.</p>
+      <p>Crafted with ❤️ and cutting-edge technology</p>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
